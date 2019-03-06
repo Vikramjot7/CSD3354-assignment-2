@@ -20,8 +20,8 @@ namespace CSD3354_assignment_2
             delegateExercises.Method3();
             Console.ReadLine();
         }
-
     }
+
     public delegate void MyDelegate();
 
     public class DelegateExercises
@@ -29,12 +29,17 @@ namespace CSD3354_assignment_2
         void Method1()
         {
             System.Console.WriteLine("Method1");
+
+
         }
+
         public void Method3()
         {
             MyDelegate myDelegate = new MyDelegate(Method1);
             myDelegate();
+            System.Console.WriteLine(myDelegate.ToString());
         }
     }
+
 
 }
