@@ -1,6 +1,6 @@
 ﻿
 
-public delegate void MyDelegate();
+
 //Student Name Jashanpreet Singh Student ID C0732125
 //Student Name Vikramjot Singh Student ID C0726863
 //CSD3354 Section 2
@@ -8,10 +8,12 @@ public delegate void MyDelegate();
 //March 6,2019using System;
 
 
-public class DelegateExercises
+using System;
+ 
+namespace DelegatesAndEvents
 {
-    void Method3()
+    public delegate void MyDelegate();
+    public class DelegateExercises : MyDelegate
     {
-        System.Console.WriteLine(MyDelegate.ToString());
     }
 }
