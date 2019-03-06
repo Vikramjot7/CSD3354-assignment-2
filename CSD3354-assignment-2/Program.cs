@@ -22,24 +22,26 @@ namespace CSD3354_assignment_2
         }
     }
 
-    public delegate void MyDelegate();
+    public delegate int MyDelegate(out int i);
 
     public class DelegateExercises
     {
-        void Method1()
+        int Method1(out int i)
         {
             System.Console.WriteLine("Method1");
-
-
+            i = 10;
+            return 0;
         }
 
         public void Method3()
         {
             MyDelegate myDelegate = new MyDelegate(Method1);
-            myDelegate();
-            System.Console.WriteLine(myDelegate.ToString());
+            MyDelegate myDelegate1 = new MyDelegate(Method1);
+            MyDelegate myDelegate2 = myDelegate + myDelegate1;
+            int intValue;
+            myDelegate2(out intValue);
+
         }
     }
-
 
 }
